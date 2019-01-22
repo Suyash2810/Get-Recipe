@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Spectral+SC');
+
+#brand_Header {
+    font-family: 'Spectral SC', serif;
+    font-size: 2em;
+    color: white;
+}
