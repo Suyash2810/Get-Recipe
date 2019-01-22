@@ -5,3 +5,12 @@
     font-size: 2em;
     color: white;
 }
+
+#myNavbar ul li a {
+    color: white;
+    font-family: 'Spectral SC', serif;
+}
+
+button {
+    font-family: 'Spectral SC', serif;
+}
