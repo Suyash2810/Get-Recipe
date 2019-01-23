@@ -15,7 +15,7 @@ button {
     font-family: 'Spectral SC', serif;
 }
 
-.container-fluid {
+#navbar_container {
     background-image: url('../images/pexels-photo-1183099.jpeg');
     background-attachment: fixed;
     background-size: cover;
@@ -28,4 +28,17 @@ button {
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
+}
+
+.carousel-caption {
+    margin-bottom: 2%;
+}
+
+#search_well {
+    background-image: url('../images/pexels-photo-1796698.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 700px;
 }
