@@ -42,3 +42,25 @@ button {
     background-position: center center;
     height: 700px;
 }
+
+#form_search {
+    background-color: darkslategray;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+}
+
+input[type=text] {
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+#submitBtn:hover {
+    border: 2px solid darkorchid;
+}
+
+input[type=text]:focus {
+    border: 1px solid darkorchid;
+}
