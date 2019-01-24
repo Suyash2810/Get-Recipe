@@ -131,7 +131,7 @@
                             </div>
                             <div class="row" style="margin-top:50px;">
                                 <div class="col-md-8 col-md-offset-2">
-                                    <form action="#">
+                                    <form action="#" id="form_select">
                                         <div class="form-group">
                                             <div class="row">
                                                 <div class="col-md-2 col-md-offset-1" style="text-align: center;">
@@ -139,7 +139,7 @@
                                                 </div>
                                                 <div class="col-md-8" id="search_input">
                                                     <input type="text" name="name" class="form-control" placeholder="Eg. Tequila"
-                                                        required>
+                                                        required id="input_data">
                                                 </div>
                                             </div>
                                         </div>
@@ -177,6 +177,10 @@
         AOS.init();
     </script>
     <script src="./Script/script.js"></script>
+    <script src="./Script/API_Fetch.js"></script>
+    <script src="./Script/UserInterface.js"></script>
+    <script src="./Script/Storage.js"></script>
+    <script src="./Script/app.js"></script>
 </body>
 
 </html>
