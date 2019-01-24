@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./Styles/style.css">
@@ -113,6 +114,46 @@
                     <div class="row" style="margin-top:70px;">
                         <div class="col-md-4 col-md-offset-4">
                             <h2 style="color:white;text-align: center;">Search by Ingredient.</h2>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 70px;">
+                        <div class="col-md-6 col-md-offset-3" id="form_search">
+                            <div class="row" style="margin-top:50px;">
+                                <div class="col-md-6 col-md-offset-3">
+                                    <p>
+                                        <h3 style="text-align:center;font-family:'Spectral SC', serif;color: white;">Enter
+                                            Ingredient</h3>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top:50px;">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <form action="#">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-2 col-md-offset-1" style="text-align: center;">
+                                                    <label for="name" style="color:white;"><i class="fa fa-search fa-2x"></i></label>
+                                                </div>
+                                                <div class="col-md-8" id="search_input">
+                                                    <input type="text" name="name" class="form-control" placeholder="Eg. Tequila"
+                                                        required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group" style="margin-top:50px;">
+                                            <div class="row">
+                                                <div class="col-md-4 col-md-offset-4" style="text-align: center;">
+                                                    <button type="submit" class="btn btn-default" style="color:darkorchid;"
+                                                        id="submitBtn">Search
+                                                        &nbsp; <i class="fa fa-paper-plane-o ml-1"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                            <br><br>
                         </div>
                     </div>
                 </div>
