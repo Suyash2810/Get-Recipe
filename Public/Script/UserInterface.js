@@ -11,5 +11,9 @@ class UserInterface {
         let container = document.querySelector('#alert_data');
         container.innerHTML = template;
 
+        //After five seconds the alert message will disappear.
+        setTimeout(() => {
+            container.innerHTML = '';
+        }, 5000);
     }
 }
