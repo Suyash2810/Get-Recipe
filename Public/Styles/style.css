@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Spectral+SC');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 #brand_Header {
     font-family: 'Spectral SC', serif;
@@ -63,4 +64,15 @@ input[type=text] {
 
 input[type=text]:focus {
     border: 1px solid darkorchid;
+}
+
+#alert_box {
+    background-color: transparent;
+    border: 1px solid darkorchid;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#alert_box:hover {
+    border: 1px solid whitesmoke;
 }
