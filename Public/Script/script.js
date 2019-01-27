@@ -21,6 +21,9 @@ window.onload = function () {
         ];
 
         const favicon = document.getElementById('faviconImage');
+        const faviconIngredient = document.getElementById('faviconImageIngredient');
+        const faviconCategory = document.getElementById('faviconImageCategory');
+        const faviconAlcohol = document.getElementById('faviconImageAlcohol');
         var counter = 0;
 
 
@@ -34,6 +37,35 @@ window.onload = function () {
             }
         }, 1000);
 
+        setInterval(() => {
+
+            faviconIngredient.setAttribute('href', array[counter]);
+
+            counter++;
+            if (counter == array.length - 1) {
+                counter = 0;
+            }
+        }, 1000);
+
+        setInterval(() => {
+
+            faviconCategory.setAttribute('href', array[counter]);
+
+            counter++;
+            if (counter == array.length - 1) {
+                counter = 0;
+            }
+        }, 1000);
+
+        setInterval(() => {
+
+            faviconAlcohol.setAttribute('href', array[counter]);
+
+            counter++;
+            if (counter == array.length - 1) {
+                counter = 0;
+            }
+        }, 1000);
 
     }
 
