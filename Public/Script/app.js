@@ -33,7 +33,8 @@ function EventListeners() {
                             let message = "No results were found.";
                             ui.printErrorMessage(message);
                         } else {
-                            console.log(data.data.drinks);
+                            // console.log(data.data.drinks);
+                            ui.printResultCards(data.data.drinks);
                         }
                     })
             }
