@@ -20,52 +20,60 @@ window.onload = function () {
             './images/pexels-photo-1799351.jpeg'
         ];
 
-        const favicon = document.getElementById('faviconImage');
-        const faviconIngredient = document.getElementById('faviconImageIngredient');
-        const faviconCategory = document.getElementById('faviconImageCategory');
-        const faviconAlcohol = document.getElementById('faviconImageAlcohol');
+        var favicon = document.getElementById('faviconImage');
+        var faviconIngredient = document.getElementById('faviconImageIngredient');
+        var faviconCategory = document.getElementById('faviconImageCategory');
+        var faviconAlcohol = document.getElementById('faviconImageAlcohol');
         var counter = 0;
 
 
-        setInterval(() => {
+        if (window.location.href.indexOf("index") > -1) {
+            setInterval(() => {
 
-            favicon.setAttribute('href', array[counter]);
+                favicon.setAttribute('href', array[counter]);
 
-            counter++;
-            if (counter == array.length - 1) {
-                counter = 0;
-            }
-        }, 1000);
+                counter++;
+                if (counter == array.length - 1) {
+                    counter = 0;
+                }
+            }, 1000);
+        }
 
-        setInterval(() => {
+        if (window.location.href.indexOf("ingredient") > -1) {
+            setInterval(() => {
 
-            faviconIngredient.setAttribute('href', array[counter]);
+                faviconIngredient.setAttribute('href', array[counter]);
 
-            counter++;
-            if (counter == array.length - 1) {
-                counter = 0;
-            }
-        }, 1000);
+                counter++;
+                if (counter == array.length - 1) {
+                    counter = 0;
+                }
+            }, 1000);
+        }
 
-        setInterval(() => {
+        if (window.location.href.indexOf("category") > -1) {
+            setInterval(() => {
 
-            faviconCategory.setAttribute('href', array[counter]);
+                faviconCategory.setAttribute('href', array[counter]);
 
-            counter++;
-            if (counter == array.length - 1) {
-                counter = 0;
-            }
-        }, 1000);
+                counter++;
+                if (counter == array.length - 1) {
+                    counter = 0;
+                }
+            }, 1000);
+        }
 
-        setInterval(() => {
+        if (window.location.href.indexOf("alcohol") > -1) {
+            setInterval(() => {
 
-            faviconAlcohol.setAttribute('href', array[counter]);
+                faviconAlcohol.setAttribute('href', array[counter]);
 
-            counter++;
-            if (counter == array.length - 1) {
-                counter = 0;
-            }
-        }, 1000);
+                counter++;
+                if (counter == array.length - 1) {
+                    counter = 0;
+                }
+            }, 1000);
+        }
 
     }
 
