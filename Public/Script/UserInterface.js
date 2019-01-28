@@ -23,18 +23,19 @@ class UserInterface {
         var template = ``;
         var result = document.getElementById('result_column');
         data.forEach((card) => {
+
             if (count == 2) {
+                count = 0;
                 template = `<div class="row">
                     ${template}
                 </div>`;
 
                 result.insertAdjacentHTML('afterend', template);
-                console.log(template);
                 template = ``;
-                count = 0;
-            } else {
-                if (count < 2) {
-                    template += `
+                console.log(card);
+            }
+            if (count < 2) {
+                template += `
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
@@ -42,18 +43,15 @@ class UserInterface {
                                 <div class="col-md-12">
                                     <div class="column" ontouchstart="this.classList.toggle('hover');">
                                         <div id="card_container">
-                                            <div class="front" style="background-image: url(https://unsplash.it/500/500/)">
+                                            <div class="front" style="background-image: url(${card.strDrinkThumb});background-size:cover;background-position:center center;">
                                                 <div class="inner">
-                                                    <p>Diligord</p>
-                                                    <span>Lorem ipsum</span>
+                                                    <p>${card.strDrink}</p>
+                                                    <span>${card.strCategory}</span>
                                                 </div>
                                             </div>
                                             <div class="back">
                                                 <div class="inner">
-                                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing
-                                                        elit. Alias cum
-                                                        repellat
-                                                        velit quae suscipit c.</p>
+                                                    <p>${card.strInstructions}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -65,9 +63,15 @@ class UserInterface {
                 </div>
                     `;
 
-                    count++;
-                }
+                count++;
             }
+
         });
+
+        template = `<div class="row">
+                    ${template}
+                </div>`;
+
+        result.insertAdjacentHTML('afterend', template);
     }
 }
