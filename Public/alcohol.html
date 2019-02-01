@@ -129,15 +129,15 @@
                             </div>
                             <div class="row" style="margin-top:50px;">
                                 <div class="col-md-8 col-md-offset-2">
-                                    <form action="#">
+                                    <form action="#" id="form_alcohol">
                                         <div class="form-group">
                                             <div class="row">
                                                 <div class="col-md-2 col-md-offset-1" style="text-align: center;">
                                                     <label for="name" style="color:white;"><i class="fa fa-search fa-2x"></i></label>
                                                 </div>
                                                 <div class="col-md-8" id="search_input">
-                                                    <input type="text" name="name" class="form-control" placeholder="Eg. Tequila"
-                                                        required>
+                                                    <input type="text" name="name" class="form-control" placeholder="Eg. Non_Alcoholic or Alcoholic"
+                                                        required id="input_data">
                                                 </div>
                                             </div>
                                         </div>
@@ -155,8 +155,86 @@
                                 </div>
                             </div>
                             <br><br>
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1" id="alert_data">
+                                    <!-- The alert message in case of wrong input will be displayed here. -->
+
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="results_container">
+        <div class="well" style="width: 100%;margin-top: 70px;background: transparent;">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3" style="text-align:center;">
+                    <h1 style="color:white;font-family: 'Spectral SC', serif;">Results</h1>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 70px;">
+                <div class="col-md-12" id="result_column">
+                    <!-- <div class="row">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="column" ontouchstart="this.classList.toggle('hover');">
+                                                <div id="card_container">
+                                                    <div class="front" style="background-image: url(https://unsplash.it/500/500/)">
+                                                        <div class="inner">
+                                                            <p>Diligord</p>
+                                                            <span>Lorem ipsum</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="back">
+                                                        <div class="inner">
+                                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing
+                                                                elit. Alias cum
+                                                                repellat
+                                                                velit quae suscipit c.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="column" ontouchstart="this.classList.toggle('hover');">
+                                                <div id="card_container">
+                                                    <div class="front" style="background-image: url(https://unsplash.it/500/500/)">
+                                                        <div class="inner">
+                                                            <p>Diligord</p>
+                                                            <span>Lorem ipsum</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="back">
+                                                        <div class="inner">
+                                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing
+                                                                elit. Alias cum
+                                                                repellat
+                                                                velit quae suscipit c.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -173,6 +251,10 @@
         AOS.init();
     </script>
     <script src="./Script/script.js"></script>
+    <script src="./Script/API_Fetch.js"></script>
+    <script src="./Script/UserInterface.js"></script>
+    <script src="./Script/Storage.js"></script>
+    <script src="./Script/app.js"></script>
 </body>
 
 </html>

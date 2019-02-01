@@ -34,4 +34,17 @@ class API_Fetch {
             data
         }
     }
+
+
+    async queryApiByAlcoholPresence(presence) {
+
+        let url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=${presence}`;
+        let response = await fetch(url);
+
+        let data = await response.json();
+
+        return {
+            data
+        }
+    }
 }
