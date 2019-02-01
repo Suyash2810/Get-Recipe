@@ -35,7 +35,7 @@ class UserInterface {
                 console.log(card);
             }
             if (count < 2) {
-                template += `
+                template = `
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
@@ -61,7 +61,7 @@ class UserInterface {
                         </div>
                     </div>
                 </div>
-                    `;
+                    ` + template;
 
                 count++;
             }
@@ -73,5 +73,65 @@ class UserInterface {
                 </div>`;
 
         result.insertAdjacentHTML('afterend', template);
+    }
+
+    // For printing the results when searched by ingredient
+    printIngredientCards(data) {
+        console.log(data);
+
+        var count2 = 0;
+        var template2 = ``;
+        var result2 = document.getElementById('result_column');
+        data.forEach((card) => {
+
+            if (count2 == 2) {
+                count2 = 0;
+                template2 = `<div class="row">
+                    ${template2}
+                </div>`;
+
+                result2.insertAdjacentHTML('afterend', template2);
+                template2 = ``;
+                console.log(card);
+            }
+            if (count2 < 2) {
+                template2 = `
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="column" ontouchstart="this.classList.toggle('hover');">
+                                        <div id="card_container">
+                                            <div class="front" style="background-image: url(${card.strDrinkThumb});background-size:cover;background-position:center center;">
+                                                <div class="inner">
+                                                    <p>${card.strDrink}</p>
+                                                    <span>${card.idDrink}</span>
+                                                </div>
+                                            </div>
+                                            <div class="back">
+                                                <div class="inner">
+                                                    <p>${card.strInstructions}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    ` + template2;
+
+                count2++;
+            }
+
+        });
+
+        template2 = `<div class="row">
+                    ${template2}
+                </div>`;
+
+        result2.insertAdjacentHTML('afterend', template2);
     }
 }
