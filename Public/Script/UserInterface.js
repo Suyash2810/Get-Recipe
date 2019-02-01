@@ -134,4 +134,63 @@ class UserInterface {
 
         result2.insertAdjacentHTML('afterend', template2);
     }
+
+    printCategoryCards(data) {
+        console.log(data);
+
+        var count3 = 0;
+        var template3 = ``;
+        var result3 = document.getElementById('result_column');
+        data.forEach((card) => {
+
+            if (count3 == 2) {
+                count3 = 0;
+                template3 = `<div class="row">
+                    ${template3}
+                </div>`;
+
+                result3.insertAdjacentHTML('afterend', template3);
+                template3 = ``;
+                console.log(card);
+            }
+            if (count3 < 2) {
+                template3 = `
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="column" ontouchstart="this.classList.toggle('hover');">
+                                        <div id="card_container">
+                                            <div class="front" style="background-image: url(${card.strDrinkThumb});background-size:cover;background-position:center center;">
+                                                <div class="inner">
+                                                    <p>${card.strDrink}</p>
+                                                    <span>${card.idDrink}</span>
+                                                </div>
+                                            </div>
+                                            <div class="back">
+                                                <div class="inner">
+                                                    <p>${card.strInstructions}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    ` + template3;
+
+                count3++;
+            }
+
+        });
+
+        template3 = `<div class="row">
+                    ${template3}
+                </div>`;
+
+        result3.insertAdjacentHTML('afterend', template3);
+    }
 }

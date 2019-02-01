@@ -22,4 +22,16 @@ class API_Fetch {
             data
         }
     }
+
+    async queryApiByCategory(category) {
+
+        let url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${category}`;
+        let response = await fetch(url);
+
+        let data = await response.json();
+
+        return {
+            data
+        }
+    }
 }
