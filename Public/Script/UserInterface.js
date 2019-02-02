@@ -54,11 +54,11 @@ class UserInterface {
                                                     <p>${card.strInstructions}</p>
                                                     <br>
                                                     <button type="button" 
-                                                    class="btn btn-default"
+                                                    class="btn btn-default dataId"
                                                     id="ingredient_button"
                                                     data-toggle="modal"
                                                     data-target="#ingredient_Data"
-                                                    onclick="showModal(card)"
+                                                    data-idreference="${card.idDrink}"
                                                     >
                                                     <span class="fa fa-arrow-right" id="ingredient_button_icon"></span>
                                                         Ingredients
@@ -76,7 +76,6 @@ class UserInterface {
 
                 count++;
             }
-
         });
 
         template = `<div class="row">

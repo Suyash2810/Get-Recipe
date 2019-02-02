@@ -159,3 +159,20 @@ function EventListeners() {
 
 
 EventListeners();
+
+function resultsDataforIngredients() {
+    let resultsSection = document.getElementById('result_section');
+
+    resultsSection.addEventListener('click', (e) => {
+        if (e.target.classList.contains('dataId')) {
+            let id = e.target.getAttribute('data-idreference');
+            fetchapi.getCardById(id)
+                .then(card => {
+                    let data = card.data.drinks[0];
+                });
+        }
+    });
+
+}
+
+resultsDataforIngredients();

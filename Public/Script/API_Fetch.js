@@ -47,4 +47,15 @@ class API_Fetch {
             data
         }
     }
+
+    async getCardById(id) {
+        let url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
+        let response = await fetch(url);
+
+        let data = await response.json();
+
+        return {
+            data
+        }
+    }
 }
