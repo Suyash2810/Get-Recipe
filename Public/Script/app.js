@@ -160,6 +160,32 @@ function EventListeners() {
 
 EventListeners();
 
+function injectdatainModal(IngreMeasureArray) {
+    let temp = ``;
+    IngreMeasureArray.forEach(oneset => {
+        temp += `
+            <h4>${oneset.ingredient} - ${oneset.measure}</h4>
+        `;
+    });
+
+    document.getElementById('indexBodyModal').innerHTML = temp;
+}
+
+function setIngredientsTemplate(data) {
+
+    let ingredientsArray = [];
+    for (let i = 1; i < 16; i++) {
+        const obj = {};
+        if (data[`strIngredient${i}`] !== '') {
+            obj.ingredient = data[`strIngredient${i}`];
+            obj.measure = data[`strMeasure${i}`];
+            ingredientsArray.push(obj);
+        }
+    }
+    injectdatainModal(ingredientsArray);
+}
+
+
 function resultsDataforIngredients() {
     let resultsSection = document.getElementById('result_section');
 
@@ -169,6 +195,7 @@ function resultsDataforIngredients() {
             fetchapi.getCardById(id)
                 .then(card => {
                     let data = card.data.drinks[0];
+                    setIngredientsTemplate(data);
                 });
         }
     });
