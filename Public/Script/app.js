@@ -51,6 +51,7 @@ function EventListeners() {
     if (IngredientForm) {
         IngredientForm.addEventListener('submit', (e) => {
             e.preventDefault();
+            ui.clearResults();
             let text = document.getElementById('input_data').value;
             let format = "!~@#$%^&*()_-+>?<{}[]";
             let flag = 0;
@@ -86,6 +87,7 @@ function EventListeners() {
     if (categoryForm) {
         categoryForm.addEventListener('submit', (e) => {
             e.preventDefault();
+            ui.clearResults();
             let text = document.getElementById('input_data').value;
             let format = "!~@#$%^&*()_-+>?<{}[]";
             let flag = 0;
@@ -121,6 +123,7 @@ function EventListeners() {
     if (form_alcohol) {
         form_alcohol.addEventListener('submit', (e) => {
             e.preventDefault();
+            ui.clearResults();
             let text = document.getElementById('input_data').value;
             let format = "!~@#$%^&*()-+>?<{}[]";
             let flag = 0;

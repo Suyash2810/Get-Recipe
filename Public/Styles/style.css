@@ -235,3 +235,11 @@ input[type=text]:focus {
     font-family: 'Montserrat';
     font-weight: 300;
 }
+
+#ingredient_button {
+    color: mediumvioletred;
+}
+
+#ingredient_button:hover {
+    border: 1px solid mediumvioletred;
+}

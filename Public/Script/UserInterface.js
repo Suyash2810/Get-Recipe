@@ -52,6 +52,17 @@ class UserInterface {
                                             <div class="back">
                                                 <div class="inner">
                                                     <p>${card.strInstructions}</p>
+                                                    <br>
+                                                    <button type="button" 
+                                                    class="btn btn-default"
+                                                    id="ingredient_button"
+                                                    data-toggle="modal"
+                                                    data-target="#ingredient_Data"
+                                                    onclick="showModal(card)"
+                                                    >
+                                                    <span class="fa fa-arrow-right" id="ingredient_button_icon"></span>
+                                                        Ingredients
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -252,5 +263,10 @@ class UserInterface {
                 </div>`;
 
         result4.insertAdjacentHTML('afterend', template4);
+    }
+
+    clearResults() {
+        let results = document.getElementById('result_column');
+        results.innerHTML = '';
     }
 }
