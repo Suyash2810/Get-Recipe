@@ -64,7 +64,7 @@ class UserInterface {
                                                         Ingredients
                                                     </button>
                                                     <br><br>
-                                                    <button class="btn btn-default" id="addDrinkStorageBtn" data-id="${card.idDrink}">
+                                                    <button class="AddBtnStorage btn btn-default" id="addDrinkStorageBtn" data-id="${card.idDrink}">
                                                         Add &nbsp; <span class="fa fa-plus"></span>
                                                     </button>
                                                 </div>

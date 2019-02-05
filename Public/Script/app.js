@@ -198,6 +198,22 @@ function resultsDataforIngredients() {
                     setIngredientsTemplate(data);
                 });
         }
+
+        if (e.target.classList.contains('AddBtnStorage')) {
+            let id = e.target.getAttribute('data-id');
+            // fetchapi.getCardById(id)
+            //     .then(card => {
+            //         console.log(card.data.drinks[0]);
+            //     })
+
+            if (e.target.classList.contains('addstoragebtn')) {
+                e.target.classList.remove('addstoragebtn');
+                e.target.textContent = 'Add';
+            } else {
+                e.target.classList.add('addstoragebtn');
+                e.target.textContent = 'Remove';
+            }
+        }
     });
 
 }

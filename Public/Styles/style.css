@@ -253,3 +253,7 @@ input[type=text]:focus {
 #addDrinkStorageBtn:hover {
     border: 1px solid mediumvioletred;
 }
+
+.addstoragebtn {
+    background: pink;
+}
