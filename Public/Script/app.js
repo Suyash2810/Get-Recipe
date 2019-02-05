@@ -1,6 +1,7 @@
 //Creation of the classes
 const ui = new UserInterface();
 const fetchapi = new API_Fetch();
+const storage = new Storage();
 
 //Defining all the event listeners
 
@@ -201,10 +202,8 @@ function resultsDataforIngredients() {
 
         if (e.target.classList.contains('AddBtnStorage')) {
             let id = e.target.getAttribute('data-id');
-            // fetchapi.getCardById(id)
-            //     .then(card => {
-            //         console.log(card.data.drinks[0]);
-            //     })
+            let drinkObject;
+
 
             if (e.target.classList.contains('addstoragebtn')) {
                 e.target.classList.remove('addstoragebtn');
@@ -212,6 +211,18 @@ function resultsDataforIngredients() {
             } else {
                 e.target.classList.add('addstoragebtn');
                 e.target.textContent = 'Remove';
+                fetchapi.getCardById(id)
+                    .then(card => {
+                        let drink = card.data.drinks[0];
+
+                        drinkObject = {
+                            id: drink.idDrink,
+                            name: drink.strDrink,
+                            imgDrink: drink.strDrinkThumb
+                        }
+                        console.log(drinkObject);
+                        storage.setDrinkToStorage(drinkObject);
+                    });
             }
         }
     });
