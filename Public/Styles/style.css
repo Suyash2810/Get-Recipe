@@ -243,3 +243,13 @@ input[type=text]:focus {
 #ingredient_button:hover {
     border: 1px solid mediumvioletred;
 }
+
+#addDrinkStorageBtn {
+    color: mediumvioletred;
+    border-radius: 50px;
+    transition: border 1s ease-in;
+}
+
+#addDrinkStorageBtn:hover {
+    border: 1px solid mediumvioletred;
+}

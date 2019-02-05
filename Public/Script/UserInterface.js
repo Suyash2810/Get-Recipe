@@ -63,6 +63,10 @@ class UserInterface {
                                                     <span class="fa fa-arrow-right" id="ingredient_button_icon"></span>
                                                         Ingredients
                                                     </button>
+                                                    <br><br>
+                                                    <button class="btn btn-default" id="addDrinkStorageBtn" data-id="${card.idDrink}">
+                                                        Add &nbsp; <span class="fa fa-plus"></span>
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
