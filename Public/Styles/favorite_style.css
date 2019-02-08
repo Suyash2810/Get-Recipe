@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Spectral+SC');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+    font-family: 'Spectral SC', serif;
+    background-image: url('../images/board-bright-design-235994.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+
+#header_link li a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: border-bottom 2s ease-in-out;
+}
+
+#header_link li a:hover {
+    border-bottom: 1px solid white;
+
+}
+
+#nvrbrand {
+    font-size: 32px;
+    color: white;
+    transition: transform 1s linear;
+}
+
+#nvrbrand:hover {
+    transform: translateY(-3px);
+}
+
+#backgroundImage {
+    background-image: url('../images/abstract-art-background-925743.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: 0;
+}
