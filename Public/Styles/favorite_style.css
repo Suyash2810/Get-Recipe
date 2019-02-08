@@ -41,3 +41,36 @@ body {
     background-repeat: no-repeat;
     margin-top: 0;
 }
+
+#bd1 {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+#bd2 {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+#panelgroup {
+    background: rgba(0, 0, 0, 0.5);
+    height: 400px;
+}
+
+#panel_head_bg {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#panel_head {
+
+    position: relative;
+    text-align: center;
+    display: table-cell;
+
+}
+
+#heading_panel {
+    position: relative;
+    display: inline-table;
+    vertical-align: center;
+}
