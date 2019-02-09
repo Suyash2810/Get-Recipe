@@ -61,16 +61,11 @@ body {
     background: rgba(0, 0, 0, 0.5);
 }
 
-#panel_head {
-
-    position: relative;
-    text-align: center;
-    display: table-cell;
-
+#heading_panel h3 {
+    margin: 20px;
 }
 
-#heading_panel {
-    position: relative;
-    display: inline-table;
-    vertical-align: center;
+#bd3 {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
