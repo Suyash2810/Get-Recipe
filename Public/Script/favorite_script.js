@@ -22,7 +22,7 @@ window.onload = function () {
     }
 
     function addSelectedDrinksToFavorite(list) {
-        const panel = document.getElementById('panelgroup');
+        const panel = document.getElementById('panel');
         var SelectedList = list;
         var template = `<br>`;
 
@@ -30,12 +30,12 @@ window.onload = function () {
             (item) => {
                 if (item !== null) {
                     template += `
-                    <div class="panel panel-default" style="background-color:transparent;">
-                        <div class="panel-header">
-                            <h3 style="font-family: 'Montserrat', sans-serif;font-size:25px;color:white;margin-left:20px;">${item.name}</h3>
-                            
-                        </div>
-                    </div>
+                    <tr style="color:white;">
+                        <td>${item.id}</td>
+                        <td>${item.name}</td>
+                        <td><img src="${item.imgDrink}" alt="${item.name}" class="img-fluid" width="80px" height="80px" style="text-align:center;"></td>
+                        <td><a class="btn btn-danger" data-id="${item.id}">Remove</a></td>
+                    </tr>
                 `;
                     console.log(template);
                 }
