@@ -125,7 +125,7 @@ class UserInterface {
                                             </div>
                                             <div class="back">
                                                 <div class="inner">
-                                                    <p>${card.strInstructions}</p>
+                                                    <p>${card.strDrink}</p>
                                                 </div>
                                             </div>
                                         </div>

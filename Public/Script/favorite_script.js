@@ -42,10 +42,10 @@ window.onload = function () {
                             >View</a></td>
                         <td>${item.name}</td>
                         <td><img src="${item.imgDrink}" alt="${item.name}" class="img-fluid" width="80px" height="80px" style="text-align:center;"></td>
-                        <td><a class="btn btn-danger" data-id="${item.id}">Remove</a></td>
+                        <td><a class="btn btn-danger removeModalSelected" data-id="${item.id}">Remove</a></td>
                     </tr>
                 `;
-                    console.log(template);
+
                 }
             }
         );
@@ -113,7 +113,7 @@ window.onload = function () {
                     .then(
                         (Item) => {
                             drink = Item.data.drinks[0];
-                            console.log(drink)
+
                             viewHeader.innerHTML = `
                                         <div>
                                             <img src="${drink.strDrinkThumb}"
@@ -128,8 +128,8 @@ window.onload = function () {
 
                             document.getElementById('instructions').innerHTML = drink.strInstructions;
 
-                            console.log(viewBody);
-                            console.log(createdTemplate);
+                            document.getElementById('drinkName').innerHTML = drink.strDrink;
+
                         }
                     )
             }
@@ -137,5 +137,36 @@ window.onload = function () {
     }
 
     viewSelectedModal();
+
+
+    function removeModalLocalStorage(id) {
+
+        let list = getDrinksFromStorage();
+
+        list.forEach(
+            (listItem, index) => {
+                if (listItem.id === id) {
+                    list.splice(index, 1);
+                    localStorage.setItem('drinks', JSON.stringify(list));
+                }
+            }
+        )
+
+    }
+
+    function removeSelectedModal() {
+
+        document.getElementById('tablegroup').addEventListener('click', (e) => {
+
+
+            if (e.target.classList.contains('removeModalSelected')) {
+                // console.log(e.target.dataset.id);
+                e.target.parentElement.parentElement.remove();
+                removeModalLocalStorage(e.target.dataset.id);
+            }
+        })
+    }
+
+    removeSelectedModal();
 
 }
