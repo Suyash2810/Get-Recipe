@@ -126,6 +126,8 @@ window.onload = function () {
 
                             document.getElementById('ingremeasure').innerHTML = createdTemplate;
 
+                            document.getElementById('instructions').innerHTML = drink.strInstructions;
+
                             console.log(viewBody);
                             console.log(createdTemplate);
                         }
