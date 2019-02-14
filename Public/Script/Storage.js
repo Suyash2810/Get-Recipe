@@ -18,4 +18,18 @@ class Storage {
         }
         return drinksList;
     }
+
+    removeItemFromLocalStorage(id) {
+        let list = this.getDrinksFromStorage();
+
+        list.forEach(
+            (item, index) => {
+
+                if (item.id === id) {
+                    list.splice(index, 1);
+                }
+            });
+
+        localStorage.setItem('drinks', JSON.stringify(list));
+    }
 }

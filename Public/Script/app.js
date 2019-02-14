@@ -208,6 +208,7 @@ function resultsDataforIngredients() {
             if (e.target.classList.contains('addstoragebtn')) {
                 e.target.classList.remove('addstoragebtn');
                 e.target.textContent = 'Add';
+                storage.removeItemFromLocalStorage(id);
             } else {
                 e.target.classList.add('addstoragebtn');
                 e.target.textContent = 'Remove';
