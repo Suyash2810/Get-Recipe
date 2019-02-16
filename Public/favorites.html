@@ -27,7 +27,8 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a href="#" class="navbar-brand" id="nvrbrand">
+                <a href="#" class="navbar-brand" id="nvrbrand" class="your-element" data-tilt data-tilt-max="50"
+                    data-tilt-speed="400" data-tilt-perspective="500">
                     Favorite
                 </a>
             </div>
@@ -40,7 +41,8 @@
                     <li><a href="alcohol.html">Alcohol/Non-Alcohol</a></li>
                 </ul>
 
-                <a href="./index.html" class="btn btn-info pull-right" style="margin-top:0.5%;">Home Page</a>
+                <a href="./index.html" class="btn btn-info pull-right" style="margin-top:0.5%;" class="your-element"
+                    data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500">Home Page</a>
             </div>
         </div>
     </nav>
@@ -52,7 +54,8 @@
         <canvas></canvas>
         <div class="row" style="margin-top:50px;">
             <div class="col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3">
-                <div class="text-center" id="bd1" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="500">
+                <div class="text-center" id="bd1" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="500"
+                    class="your-element" data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500">
                     <h2 style="color:white;padding: 10px;">Welcome to the favorite section.</h2>
                 </div>
             </div>
@@ -60,7 +63,8 @@
 
         <div class="row" style="margin-top:50px;">
             <div class="col-md-4 col-md-offset-4 col-xs-4 col-xs-offset-4">
-                <div class="text-center" id="bd2" data-aos="fade-down" data-aos-duration="1800" data-aos-delay="700">
+                <div class="text-center" id="bd2" data-aos="fade-down" data-aos-duration="1800" data-aos-delay="700"
+                    class="your-element" data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500">
                     <h2 style="color:white;padding: 10px;">Manage the list.</h2>
                 </div>
             </div>
@@ -87,14 +91,16 @@
     <div class="container-fluid" style="height:500px;margin-top: 250px;">
         <div class="row">
             <div class="col-md-2 col-md-offset-5 col-sm-2 col-sm-offset-5 col-xs-4 col-xs-offset-4">
-                <div class="text-center" id="bd3" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="500">
+                <div class="text-center" id="bd3" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="500"
+                    class="your-element" data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500">
                     <h2 style="color:white;padding: 10px;">List</h2>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-8 col-md-offset-2" style="margin-top:70px;height: 100px;" data-aos="zoom-out"
-                data-aos-duration="1500" data-aos-delay="500">
+                data-aos-duration="1500" data-aos-delay="500" class="your-element" data-tilt data-tilt-max="5"
+                data-tilt-speed="400" data-tilt-perspective="900">
                 <div class="table-responsive" id="tablegroup">
                     <table class="table table-hover table-dark table-borderless" id="tableFavorite">
                         <thead>
@@ -159,6 +165,7 @@
     <script src="./Script/favorite_script.js"></script>
     <script src="./Script/particles.js"></script>
     <script src="./Script/anime.min.js"></script>
+    <script src="./Script/tilt.js"></script>
     <script>
         // Initialize a new instance of Particles to disintegrate/integrate the button
         var particles = new Particles('.button');
