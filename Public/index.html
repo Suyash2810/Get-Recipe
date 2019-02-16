@@ -52,8 +52,7 @@
 
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img src="./images/alcohol-alcoholic-beverage-bar-1189261-min.jpeg" alt="Chania" class="img-fluid"
-                            id="c_image">
+                        <img src="./images/art-blur-cappuccino-302899.jpg" alt="Chania" class="img-fluid" id="c_image">
                         <div class="carousel-caption">
                             <h3>Fruits and Vegetables</h3>
                             <p>Most vegetable and almost all fruits contain a small amount of alcohol in them.</p>
@@ -172,7 +171,8 @@
         </div>
     </div>
 
-    <div class="container-fluid" id="results_container">
+    <div class="container-fluid" id="results_container" class="my-paroller" data-paroller-factor="0.3"
+        data-paroller-type="foreground" data-paroller-direction="horizontal">
         <div class="well" style="width: 100%;margin-top: 70px;background: transparent;">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3" style="text-align:center;">
@@ -274,8 +274,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./Script/jquery.paroller.js"></script>
     <script>
         AOS.init();
+    </script>
+    <script>
+        $('.my-paroller').paroller();
     </script>
     <script src="./Script/script.js"></script>
     <script src="./Script/API_Fetch.js"></script>
