@@ -50,8 +50,7 @@
     <script src="./Script/interactive-image.js"></script>
 
 
-    <div class="container-fluid" id="backgroundImage" id="my-interactive-image">
-        <canvas></canvas>
+    <div class="container-fluid" id="backgroundImage">
         <div class="row" style="margin-top:50px;">
             <div class="col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3">
                 <div class="text-center" id="bd1" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="500"
@@ -166,6 +165,17 @@
     <script src="./Script/particles.js"></script>
     <script src="./Script/anime.min.js"></script>
     <script src="./Script/tilt.js"></script>
+    <script src="./Script/ripple.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#ripple").waterripple();
+        });
+    </script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
     <script>
         // Initialize a new instance of Particles to disintegrate/integrate the button
         var particles = new Particles('.button');
@@ -174,11 +184,6 @@
         particles.disintegrate();
 
         // particles.integrate(); // would do the opposite
-    </script>
-    <script>
-        AOS.init({
-            once: true
-        });
     </script>
 
 </body>
