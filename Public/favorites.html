@@ -157,6 +157,17 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./Script/Storage.js"></script>
     <script src="./Script/favorite_script.js"></script>
+    <script src="./Script/particles.js"></script>
+    <script src="./Script/anime.min.js"></script>
+    <script>
+        // Initialize a new instance of Particles to disintegrate/integrate the button
+        var particles = new Particles('.button');
+
+        // Disintegrate the button into particles
+        particles.disintegrate();
+
+        // particles.integrate(); // would do the opposite
+    </script>
     <script>
         AOS.init({
             once: true
