@@ -26,6 +26,16 @@ To get the Google Custom Search API key required follow the steps below:
 7. Follow the steps and it will be done. 
 ```
 
+To use the code for Google Custom Search, follow the steps:
+
+```
+1. Copy the code.
+2. Go to favorites.html flie. 
+3. Find the region where the code for the Custom Search is.
+4. Replace it with your code.
+5. Work is done.
+```
+
 ## Running the program
 
 For running the project successfully one will need a source code editor with a powerful developing tool. I preferably use Visual Studio Code. Atom, Brackets or any other will also work.
